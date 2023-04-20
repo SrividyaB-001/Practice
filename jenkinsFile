@@ -11,9 +11,10 @@ pipeline {
                 echo "Deploy Stage"
                 script {
                     sh '''
-                    pwd
-                    ls -l
-                    mkdir Test
+                    for var in 0 1 2 
+                    do 
+                    mkdir test$var
+                    echo "test$var"
                     '''
                 }
             }

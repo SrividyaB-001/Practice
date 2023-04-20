@@ -9,14 +9,12 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploy Stage"
-                script {
-                    sh '''
+                sh '''
                     for var in 0 1 2 
                     do 
                     mkdir test$var
                     echo "test$var"
                     '''
-                }
             }
         }
     }

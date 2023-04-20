@@ -9,6 +9,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploy Stage"
+                script {
+                    sh '''
+                    pwd
+                    ls -l
+                    mkdir Test
+                    '''
+                }
             }
         }
     }

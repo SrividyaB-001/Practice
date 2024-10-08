@@ -1,6 +1,10 @@
 pipeline {
     agent any
     stages {
+       stage('checkout') {
+          git config --global http.sslVerify false
+          checkout scm
+}
         stage('Build') {
             steps {
                 echo "Build Stage"
